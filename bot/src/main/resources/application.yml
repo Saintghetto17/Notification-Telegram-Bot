@@ -1,0 +1,14 @@
+app:
+  telegram-token: NO!
+
+spring:
+  application:
+    name: bot
+  jackson:
+    time-zone: UTC
+
+server:
+  port: 8080
+
+logging:
+  config: classpath:log4j2-plain.xml
