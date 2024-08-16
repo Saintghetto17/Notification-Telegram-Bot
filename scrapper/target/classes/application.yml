@@ -1,0 +1,18 @@
+app:
+  scheduler:
+    enable: true
+    interval: 10s
+    force-check-delay: 10s
+
+spring:
+  application:
+    name: scrapper
+
+server:
+  port: 8080
+
+logging:
+  config: classpath:log4j2-plain.xml
+
+default_github_url: "https://api.github.com/"
+default_stack_url: "https://api.stackexchange.com/2.3/"
