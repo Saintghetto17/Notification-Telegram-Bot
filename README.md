@@ -8,6 +8,7 @@ sends notifications if new updates.
 
 Uses `Java 21` with `Spring Boot 3`.
 
-Then I will add database communication and other more skilled features
+Then I will add database communication, message queueing (Kafka ir RabbitMQ f.e).
 
+## NOTE: This project is ongoing. It is not finished yet!
 @NotificationTinkoffBot
