@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ChatNotFoundErrorResponse.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bot</a> &gt; <a href="index.source.html" class="el_package">com.example.model</a> &gt; <span class="el_source">ChatNotFoundErrorResponse.java</span></div><h1>ChatNotFoundErrorResponse.java</h1><pre class="source lang-java linenums">package com.example.model;
+
+import java.net.URI;
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.time.OffsetDateTime;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.*;
+import io.swagger.v3.oas.annotations.media.Schema;
+
+
+import java.util.*;
+import jakarta.annotation.Generated;
+
+/**
+ * ChatNotFoundErrorResponse
+ */
+
+@Generated(value = &quot;org.openapitools.codegen.languages.SpringCodegen&quot;, date = &quot;2024-08-22T11:42:38.161026300+03:00[Europe/Moscow]&quot;)
+<span class="nc" id="L25">public class ChatNotFoundErrorResponse {</span>
+
+  private String description;
+
+  private String code;
+
+  private String exceptionName;
+
+  private String exceptionMessage;
+
+  @Valid
+  private List&lt;String&gt; stacktrace;
+
+  public ChatNotFoundErrorResponse description(String description) {
+<span class="nc" id="L39">    this.description = description;</span>
+<span class="nc" id="L40">    return this;</span>
+  }
+
+  /**
+   * Get description
+   * @return description
+  */
+  
+  @Schema(name = &quot;description&quot;, requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty(&quot;description&quot;)
+  public String getDescription() {
+<span class="nc" id="L51">    return description;</span>
+  }
+
+  public void setDescription(String description) {
+<span class="nc" id="L55">    this.description = description;</span>
+<span class="nc" id="L56">  }</span>
+
+  public ChatNotFoundErrorResponse code(String code) {
+<span class="nc" id="L59">    this.code = code;</span>
+<span class="nc" id="L60">    return this;</span>
+  }
+
+  /**
+   * Get code
+   * @return code
+  */
+  
+  @Schema(name = &quot;code&quot;, requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty(&quot;code&quot;)
+  public String getCode() {
+<span class="nc" id="L71">    return code;</span>
+  }
+
+  public void setCode(String code) {
+<span class="nc" id="L75">    this.code = code;</span>
+<span class="nc" id="L76">  }</span>
+
+  public ChatNotFoundErrorResponse exceptionName(String exceptionName) {
+<span class="nc" id="L79">    this.exceptionName = exceptionName;</span>
+<span class="nc" id="L80">    return this;</span>
+  }
+
+  /**
+   * Get exceptionName
+   * @return exceptionName
+  */
+  
+  @Schema(name = &quot;exceptionName&quot;, requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty(&quot;exceptionName&quot;)
+  public String getExceptionName() {
+<span class="nc" id="L91">    return exceptionName;</span>
+  }
+
+  public void setExceptionName(String exceptionName) {
+<span class="nc" id="L95">    this.exceptionName = exceptionName;</span>
+<span class="nc" id="L96">  }</span>
+
+  public ChatNotFoundErrorResponse exceptionMessage(String exceptionMessage) {
+<span class="nc" id="L99">    this.exceptionMessage = exceptionMessage;</span>
+<span class="nc" id="L100">    return this;</span>
+  }
+
+  /**
+   * Get exceptionMessage
+   * @return exceptionMessage
+  */
+  
+  @Schema(name = &quot;exceptionMessage&quot;, requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty(&quot;exceptionMessage&quot;)
+  public String getExceptionMessage() {
+<span class="nc" id="L111">    return exceptionMessage;</span>
+  }
+
+  public void setExceptionMessage(String exceptionMessage) {
+<span class="nc" id="L115">    this.exceptionMessage = exceptionMessage;</span>
+<span class="nc" id="L116">  }</span>
+
+  public ChatNotFoundErrorResponse stacktrace(List&lt;String&gt; stacktrace) {
+<span class="nc" id="L119">    this.stacktrace = stacktrace;</span>
+<span class="nc" id="L120">    return this;</span>
+  }
+
+  public ChatNotFoundErrorResponse addStacktraceItem(String stacktraceItem) {
+<span class="nc bnc" id="L124" title="All 2 branches missed.">    if (this.stacktrace == null) {</span>
+<span class="nc" id="L125">      this.stacktrace = new ArrayList&lt;&gt;();</span>
+    }
+<span class="nc" id="L127">    this.stacktrace.add(stacktraceItem);</span>
+<span class="nc" id="L128">    return this;</span>
+  }
+
+  /**
+   * Get stacktrace
+   * @return stacktrace
+  */
+  
+  @Schema(name = &quot;stacktrace&quot;, requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+  @JsonProperty(&quot;stacktrace&quot;)
+  public List&lt;String&gt; getStacktrace() {
+<span class="nc" id="L139">    return stacktrace;</span>
+  }
+
+  public void setStacktrace(List&lt;String&gt; stacktrace) {
+<span class="nc" id="L143">    this.stacktrace = stacktrace;</span>
+<span class="nc" id="L144">  }</span>
+
+  @Override
+  public boolean equals(Object o) {
+<span class="nc bnc" id="L148" title="All 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L149">      return true;</span>
+    }
+<span class="nc bnc" id="L151" title="All 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L152">      return false;</span>
+    }
+<span class="nc" id="L154">    ChatNotFoundErrorResponse chatNotFoundErrorResponse = (ChatNotFoundErrorResponse) o;</span>
+<span class="nc bnc" id="L155" title="All 2 branches missed.">    return Objects.equals(this.description, chatNotFoundErrorResponse.description) &amp;&amp;</span>
+<span class="nc bnc" id="L156" title="All 2 branches missed.">        Objects.equals(this.code, chatNotFoundErrorResponse.code) &amp;&amp;</span>
+<span class="nc bnc" id="L157" title="All 2 branches missed.">        Objects.equals(this.exceptionName, chatNotFoundErrorResponse.exceptionName) &amp;&amp;</span>
+<span class="nc bnc" id="L158" title="All 2 branches missed.">        Objects.equals(this.exceptionMessage, chatNotFoundErrorResponse.exceptionMessage) &amp;&amp;</span>
+<span class="nc bnc" id="L159" title="All 2 branches missed.">        Objects.equals(this.stacktrace, chatNotFoundErrorResponse.stacktrace);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="nc" id="L164">    return Objects.hash(description, code, exceptionName, exceptionMessage, stacktrace);</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="nc" id="L169">    StringBuilder sb = new StringBuilder();</span>
+<span class="nc" id="L170">    sb.append(&quot;class ChatNotFoundErrorResponse {\n&quot;);</span>
+<span class="nc" id="L171">    sb.append(&quot;    description: &quot;).append(toIndentedString(description)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L172">    sb.append(&quot;    code: &quot;).append(toIndentedString(code)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L173">    sb.append(&quot;    exceptionName: &quot;).append(toIndentedString(exceptionName)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L174">    sb.append(&quot;    exceptionMessage: &quot;).append(toIndentedString(exceptionMessage)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L175">    sb.append(&quot;    stacktrace: &quot;).append(toIndentedString(stacktrace)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L176">    sb.append(&quot;}&quot;);</span>
+<span class="nc" id="L177">    return sb.toString();</span>
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+<span class="nc bnc" id="L185" title="All 2 branches missed.">    if (o == null) {</span>
+<span class="nc" id="L186">      return &quot;null&quot;;</span>
+    }
+<span class="nc" id="L188">    return o.toString().replace(&quot;\n&quot;, &quot;\n    &quot;);</span>
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UntrackCommand.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bot</a> &gt; <a href="index.source.html" class="el_package">edu.java.bot.commands</a> &gt; <span class="el_source">UntrackCommand.java</span></div><h1>UntrackCommand.java</h1><pre class="source lang-java linenums">package edu.java.bot.commands;
+
+import com.pengrad.telegrambot.model.Update;
+import com.pengrad.telegrambot.request.SendMessage;
+import edu.java.bot.repository.TrackedLinksRepository;
+import edu.java.bot.utils.LinkValidator;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+
+<span class="nc" id="L10">@RequiredArgsConstructor(onConstructor = @__(@Autowired))</span>
+public class UntrackCommand implements Command {
+
+    private final TrackedLinksRepository trackedLinksRepository;
+
+    @Override
+    public String command() {
+<span class="nc" id="L17">        return &quot;/untrack&quot;;</span>
+    }
+
+    @Override
+    public String description() {
+<span class="nc" id="L22">        return &quot;Stop to track the resource by link&quot;;</span>
+    }
+
+    @Override
+    public SendMessage handle(Update update) {
+
+<span class="nc" id="L28">        String[] allTokens = update.message().text().replaceAll(&quot;\\s+&quot;, &quot; &quot;).split(&quot; &quot;);</span>
+
+<span class="nc bnc" id="L30" title="All 2 branches missed.">        if (allTokens.length != 2) {</span>
+<span class="nc" id="L31">            return new SendMessage(update.message().chat().id(), &quot;Please, provide a link. Only one link is allowed&quot;);</span>
+        }
+
+<span class="nc" id="L34">        String link = allTokens[1];</span>
+<span class="nc" id="L35">        Long chatId = update.message().chat().id();</span>
+
+<span class="nc bnc" id="L37" title="All 2 branches missed.">        if (!LinkValidator.isValidLinkURL(link)) {</span>
+<span class="nc" id="L38">            return new SendMessage(</span>
+                chatId,
+                &quot;Invalid link, please enter correct link in URL format&quot;
+            );
+        }
+<span class="nc bnc" id="L43" title="All 2 branches missed.">        if (!trackedLinksRepository.isLinkExists(chatId, link)) {</span>
+<span class="nc" id="L44">            return new SendMessage(chatId, &quot;This link is not tracked by you&quot;);</span>
+        }
+<span class="nc" id="L46">        trackedLinksRepository.removeLink(chatId, link);</span>
+<span class="nc" id="L47">        return new SendMessage(chatId, &quot;The link has been removed&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

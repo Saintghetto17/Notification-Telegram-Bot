@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>HelpCommand.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bot</a> &gt; <a href="index.source.html" class="el_package">edu.java.bot.commands</a> &gt; <span class="el_source">HelpCommand.java</span></div><h1>HelpCommand.java</h1><pre class="source lang-java linenums">package edu.java.bot.commands;
+
+import com.pengrad.telegrambot.model.Update;
+import com.pengrad.telegrambot.request.SendMessage;
+
+<span class="nc" id="L6">public class HelpCommand implements Command {</span>
+
+    private static final String MESSAGE = &quot;✨ Welcome to NotificationBot Help Center! ✨\n&quot; +
+        &quot;\n&quot; +
+        &quot;\uD83D\uDEE0\uFE0F **Available Commands:**\n&quot; +
+        &quot;\n&quot; +
+        &quot;1. **/start** - Starts a Notification bot. \n&quot; +
+        &quot;2. **/list** - Shows the list of commands. \n&quot; +
+        &quot;3. **/track** - Start to track a new resource by link. \n&quot; +
+        &quot;4. **/untrack** - Stop to track the resource by link. \n&quot; +
+        &quot;5. **/help** - The command that shows the help page. \n&quot; +
+        &quot;\n&quot; +
+        &quot;✨ *Thank you for using [NotificationBot]!* ✨&quot;;
+
+    @Override
+    public String command() {
+<span class="nc" id="L22">        return &quot;/help&quot;;</span>
+    }
+
+    @Override
+    public String description() {
+<span class="nc" id="L27">        return &quot;The command that shows the help page.&quot;;</span>
+    }
+
+    @Override
+    public SendMessage handle(Update update) {
+<span class="nc" id="L32">        return new SendMessage(update.message().chat().id(), MESSAGE);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

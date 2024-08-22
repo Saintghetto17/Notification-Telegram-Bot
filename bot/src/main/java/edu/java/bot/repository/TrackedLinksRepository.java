@@ -27,6 +27,7 @@ public class TrackedLinksRepository {
     }
 
     public void removeLink(Long id, String link) {
+
         chatLinks.get(id).remove(link);
         userLinks.get(id).remove(link);
     }

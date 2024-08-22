@@ -1,0 +1,11 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/com/example/api/ApiUtil.java
+src/main/java/com/example/api/LinksApi.java
+src/main/java/com/example/api/TgChatApi.java
+src/main/java/com/example/model/AddLinkRequest.java
+src/main/java/com/example/model/ApiErrorResponse.java
+src/main/java/com/example/model/LinkResponse.java
+src/main/java/com/example/model/ListLinksResponse.java
+src/main/java/com/example/model/RemoveLinkRequest.java

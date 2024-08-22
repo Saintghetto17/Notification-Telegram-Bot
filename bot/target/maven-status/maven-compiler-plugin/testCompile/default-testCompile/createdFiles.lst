@@ -1,0 +1,4 @@
+edu\java\bot\runners\BotListenerImplTest.class
+edu\java\bot\service\UserMessageServiceTest.class
+edu\java\bot\repository\TrackedLinksRepositoryTest.class
+edu\java\bot\commands\CommandsTest.class

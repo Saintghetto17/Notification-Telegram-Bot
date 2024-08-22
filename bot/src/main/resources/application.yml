@@ -1,5 +1,5 @@
 app:
-  telegram-token: NO!
+  telegram-token: 7307114217:AAFZmhqRtB49FQroAzV02gTh9rt6OQQDUfE
 
 spring:
   application:
@@ -7,8 +7,16 @@ spring:
   jackson:
     time-zone: UTC
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    enabled: true
+
 server:
   port: 8080
 
 logging:
   config: classpath:log4j2-plain.xml
+
+default_bot_scrapper: "https://localhost:8081/"

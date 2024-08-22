@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="scrapper" />
         <module name="bot" />
+        <module name="reuse" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="bot" options="-parameters -Xlint:all" />
+      <module name="reuse" options="-parameters -Xlint:all" />
       <module name="scrapper" options="-parameters -Xlint:all" />
     </option>
   </component>

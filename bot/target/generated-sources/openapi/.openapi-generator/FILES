@@ -1,0 +1,8 @@
+README.md
+pom.xml
+src/main/java/com/example/api/ApiUtil.java
+src/main/java/com/example/api/UpdatesApi.java
+src/main/java/com/example/model/ChatNotFoundErrorResponse.java
+src/main/java/com/example/model/IncorrectParametersErrorResponse.java
+src/main/java/com/example/model/LinkUpdate.java
+src/main/java/com/example/model/RepeatableCrearionErrorResponse.java

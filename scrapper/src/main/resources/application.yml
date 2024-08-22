@@ -8,11 +8,18 @@ spring:
   application:
     name: scrapper
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    enabled: true
+
 server:
-  port: 8080
+  port: 8081
 
 logging:
   config: classpath:log4j2-plain.xml
 
 default_github_url: "https://api.github.com/"
 default_stack_url: "https://api.stackexchange.com/2.3/"
+default_bot_url: "https://localhost:8080/"

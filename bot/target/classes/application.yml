@@ -7,8 +7,16 @@ spring:
   jackson:
     time-zone: UTC
 
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
+  api-docs:
+    enabled: true
+
 server:
   port: 8080
 
 logging:
   config: classpath:log4j2-plain.xml
+
+default_bot_scrapper: "https://localhost:8081/"
